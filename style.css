@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:rgba(0, 0, 0, .8);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.cards{
+    height:100vh;
+    width:80vw;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    
+}
+.card{
+    width:330px;
+    color:white;
+}
+.card .face1{
+    padding:25px;
+    text-align:center;
+    height:200px;
+    box-shadow:0px 20px 50px rgba(0, 0, 0, .8);
+    transform: translateY(100px);
+    transition: 1s;
+    position:relative;
+    background:#333;
+    z-index:1;
+
+   
+}
+.card .face1 img{
+    width:40%;
+    opacity:.3;
+    transition:1s;
+}
+.card .face1 h2{
+    opacity:.3;
+    margin-top:10px;
+    transition:1s;
+}
+.card .face2{
+    background-color:white;
+    color:black;
+    padding:20px ;
+    box-shadow:0px 20px 50px rgba(0, 0, 0, .8);
+    height:200px;
+    line-height:25px;
+    transition:  1s ;
+    transform: translateY(-100px);
+}
+ 
+.card .face2 button{
+    background:none;
+    border:1px solid rgba(0, 0, 0, .7);
+    padding:5px;
+    margin-top:20px;
+    font-weight: 600;
+    color:rgba(0, 0, 0, .9);
+    
+}
+
+.card:hover .face1{
+    transform: translateY(0px);
+    box-shadow:none ;
+    background-color:rgb(255, 50, 84);
+}
+.card:hover .face1 img, .card:hover .face1 h2{
+    opacity:1;
+}
+.card:hover .face2{
+    transform: translateY(0px);
+}
+
+.card .face2 button:hover{
+    background-color:#333;
+    color:white;
+}
